@@ -1,0 +1,15 @@
+# Match Hugging Face Spaces Gradio SDK version (see fake-news-detector/README.md)
+gradio==6.14.0
+joblib>=1.3.0
+# numpy 2.x may cause binary compatibility issues on some environments
+numpy>=1.26.0,<2.0
+# Keep sklearn aligned with the version used when training/saving models/best_model.joblib
+scikit-learn==1.6.1
+sentence-transformers>=2.7.0
+# Gradio 6 expects a newer pydantic-settings API than some base images ship by default
+pydantic-settings>=2.6.1
+# Pin for compatibility with sentence-transformers in this project.
+# IMPORTANT: transformers 4.41.x pulls tokenizers versions that commonly need prebuilt wheels;
+# Python 3.13 may fall back to a source build and fail (Rust/PyO3). Prefer Python <= 3.12 on Spaces/Dockerfile.
+transformers==4.41.2
+torch>=2.1.0
