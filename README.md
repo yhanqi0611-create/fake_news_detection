@@ -1,6 +1,5 @@
 ---
 title: Fake News Detector
-emoji: ⚡
 colorFrom: indigo
 colorTo: purple
 sdk: gradio
